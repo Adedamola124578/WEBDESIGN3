@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - Elite sport Entertainment</title>
+<link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+ />
+
+    <link rel="stylesheet" href="style1.css"> <!-- Link to your main CSS file -->
+</head>
+<body>
+
+<header>
+    <img src="logo2.png" alt="University Soccer Logo" class="logo">
+    <h1>Elite Sport Entertainment</h1>
+    <nav>
+         <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="team.html">Team</a></li> <!-- Link to the team page -->
+            <li><a href="schedule.html">Schedule</a></li>
+            
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="team">
+    <div class="container">
+        <h2>Team Search</h2>
+        <div id="search-form">
+            <input type="text" id="search-input" placeholder="Enter team or player name">
+            <button onclick="searchTeam()">Search</button>
+        </div>
+        <div id="search-results"></div>
+        <h2>All Team Members</h2>
+        <div id="team-members"></div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Elite Sport Entertainment. All rights reserved.</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="script2.js"></script>
+<script>
+    // Function to fetch and display all team members
+    async function displayTeamMembers() {
+        try {
+            const response = await fetch('team_members.json'); // Fetch JSON file
+            if (!response.ok) {
+                throw new Error('Failed to fetch team members');
+            }
+            const data = await response.json(); // Parse JSON data
+            const teamMembers = data.teamMembers; // Get array of team members
+
+            const teamMembersContainer = document.getElementById('team-members');
+            // Clear any existing team members
+            teamMembersContainer.innerHTML = '';
+
+            // Create HTML elements for each team member and append them to the container
+            teamMembers.forEach(member => {
+                const memberElement = document.createElement('div');
+                memberElement.classList.add('team-member');
+                memberElement.innerHTML = `
+                    <h3>${member.name}</h3>
+                    <p>Position: ${member.position}</p>
+                    <p>Age: ${member.age}</p>
+                    <p>Country: ${member.country}</p>
+                `;
+                teamMembersContainer.appendChild(memberElement);
+            });
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    // Call the displayTeamMembers function to initially display all team members
+    displayTeamMembers();
+</script>
+</body>
+</html>

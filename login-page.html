@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+
+<style>
+    /* Basic styles for the login container */
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Styles for form inputs and labels */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styles for the login button */
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+</style>
+
+</head>
+<body>
+<div class="login-container">
+    <h2>Login</h2>
+    <form action="/login" method="POST">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn">Login</button>
+    </form>
+</div>
+<script>
+const express = require('express');
+const bodyParser = require('body-parser');
+
+const app = express();
+const PORT = 8080;
+
+// Middleware to parse JSON requests
+app.use(bodyParser.json());
+
+// In-memory user database (replace this with a real database in production)
+const users = [
+    { id: 1, username: 'user1', password: 'password1' },
+    { id: 2, username: 'user2', password: 'password2' }
+];
+
+// Route to handle user login
+app.post('/login', (req, res) => {
+    const { username, password } = req.body;
+
+    // Find user by username
+    const user = users.find(u => u.username === username);
+
+    // Check if user exists and password is correct
+    if (user && user.password === password) {
+        // For simplicity, we're just sending a success message here
+        res.json({ message: 'Login successful' });
+    } else {
+        // Return 401 Unauthorized if credentials are invalid
+        res.status(401).json({ error: 'Invalid credentials' });
+    }
+});
+
+// Start the server
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+</script>
+
+
+</body>
+</html>

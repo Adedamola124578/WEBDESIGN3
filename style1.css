@@ -1,0 +1,984 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap");
+
+/* Global Styles */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center; 
+
+}
+
+.logo {
+width: 100px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: auto; /* Push the logo to the extreme left */
+    margin-left: 20px; /* Add some margin between the logo and the text */
+}
+
+header h1 {
+    margin: auto;
+}
+
+/* Mobile-first approach */
+/* Styles for small screens */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Center the navigation items */
+    display: none; /* Hide the navigation by default */
+}
+
+nav ul li {
+    display: block; /* Display items vertically */
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a::before, nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffd700;
+    transition: transform 0.3s, opacity 0.3s, width 0.3s;
+    transform: scaleX(0);
+    transform-origin: left;
+    opacity: 0;
+}
+
+nav ul li a::before {
+    top: 0;
+    bottom: auto;
+    transform-origin: right;
+}
+
+nav ul li a:hover::before, nav ul li a:hover::after {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+nav ul li a:hover::before {
+    transform-origin: left;
+}
+
+nav ul li a:hover::after {
+    transform-origin: right;
+}
+
+nav ul li a:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Styles for small screens */
+nav {
+    background-color: #333; /* Background color for the navigation bar */
+    padding: 10px; /* Add some padding to the navigation bar */
+}
+
+.nav-links {
+    display: none; /* Hide the navigation links by default */
+}
+
+.nav-links li {
+    margin-bottom: 10px; /* Add some margin between each navigation item */
+}
+
+.nav-links a {
+    color: #fff; /* Text color for the navigation links */
+    text-decoration: none; /* Remove underline from the links */
+   
+}
+
+/* Styles for the menu icon */
+.menu-icon {
+    color: #fff; /* Color of the menu icon */
+    font-size: 20px; /* Font size of the menu icon */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Styles for the navigation links when they are visible */
+@media screen and (min-width: 768px) {
+    .nav-links {
+        display: block; /* Display the navigation links */
+    }
+
+    .menu-icon {
+        display: none; /* Hide the menu icon on larger screens */
+    }
+}
+
+
+/* Styles for medium screens */
+@media screen and (min-width: 768px) {
+    nav ul {
+        text-align: left; /* Align navigation items to the left */
+        display: block; /* Show the navigation */
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    
+    /* Hide the menu icon on larger screens */
+    .menu-icon {
+        display: none;
+    }
+}
+
+ footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Homepage Styles */
+#home {
+    background-color: #f5f5f5;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#home h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+#home .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.88s ease-out, transform 0.8s ease-in-out, background-color 0.8s ease-in-out;
+}
+
+#home .btn:hover {
+    color: white;
+    transform: scale(1.1);
+    background-color: blue;
+}
+
+
+
+
+body {
+    overflow-x: hidden;
+}
+
+.main-container {
+    padding: 10px 15px;
+}
+
+
+#home footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* Apply background image to a specific element by targeting its ID */
+#element1 {
+    background-image: url('../Test/field.jpeg');
+
+
+    /* Add additional background styles */
+    background-size: cover; 
+    background-position: center; 
+}
+
+
+#element1 {
+    min-height: 90vh; /* Set a minimum height to ensure the container covers the entire viewport */
+}
+
+
+#element1 h1 {
+font-size: 58px;
+    font-weight: 700;
+    text-shadow: none;
+    color:#333;
+    text-align: left;
+    line-height: 52px;
+    letter-spacing: -2px;
+    margin-top: 100px;
+    margin-right: auto;
+    margin-bottom: 25px;
+    margin-left: auto;
+    animation: neon 1.5s ease-in-out infinite alternate; /* Neon effect animation */
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+
+#element1 .btn {
+   
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: color 0.5s ease-out, transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+margin-left: 200px;
+}
+
+#element1 .btn:hover {
+    background-color: blue;
+ transform: scale(1.1);
+color:white;
+}
+
+/* Neon effect animation */
+@keyframes neon {
+    from {
+        text-shadow: 0 0 10px #5d8786, 0 0 20px #5c728f, 0 0 30px #5c728f, 0 0 40px #5c728f, 0 0 70px #5c728f, 0 0 80px #5c728f, 0 0 100px #5c728f, 0 0 150px #5c728f;
+    }
+    to {
+       text-shadow: 0 0 5px #00fff9, 0 0 10px #5c728f, 0 0 15px #5c728f, 0 0 20px #5c728f, 0 0 35px #5c728f, 0 0 40px #5c728f, 0 0 50px #5c728f, 0 0 75px #5c728f;
+    }
+}
+
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+
+/* Slideshow Styles */
+#slideshow {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* Add animation for fading slides */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+
+
+/* Poll Styles */
+#poll {
+    text-align: center;
+}
+
+#poll-form {
+    margin-bottom: 20px;
+}
+
+.poll-option {
+    margin: 10px 0;
+}
+
+.poll-option input[type="radio"] {
+    display: none;
+}
+
+.poll-option label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.poll-option label:hover {
+    background-color: #e0e0e0;
+}
+
+.poll-option input[type="radio"]:checked + label {
+    background-color: #660033;
+    color: #fff;
+}
+
+#poll-results {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+#poll-results h3 {
+    margin-top: 0;
+}
+
+
+#poll .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.88s ease-out, transform 0.8s ease-in-out, background-color 0.8s ease-in-out;
+}
+
+
+#poll .btn:hover {
+    color: white;
+    transform: scale(1.1);
+    background-color: blue;
+}
+
+
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+/* CSS Styles for Top Headlines */
+        #top-headlines {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        #top-headlines h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .headline {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .headline:hover {
+            transform: translateY(-5px);
+        }
+
+        .headline h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #007bff;
+        }
+
+        .headline p {
+            margin: 0;
+            font-size: 16px;
+            color: #666;
+        }
+
+
+/* About Section Styles */
+#about {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#about footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+}
+
+
+
+@keyframes soccer {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#about .soccer-ball {
+    animation: soccer 2s infinite;
+    width: 100px; /* Adjust the size of the soccer ball */
+    height: auto;
+    
+    top: 50px; /* Adjust the position of the soccer ball */
+}
+
+
+/* Styles for team section */
+
+
+
+section#team {
+    padding: 50px 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#search-form {
+    margin-bottom: 20px;
+}
+
+#search-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+#search-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.88s ease-out, transform 0.8s ease-in-out, background-color 0.8s ease-in-out;
+}
+
+#search-form button:hover {
+    color: white;
+    transform: scale(1.1);
+    background-color: blue;
+}
+
+/* Search Results Styles */
+#search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#search-results li {
+    width: 100%;
+    margin-bottom: 100px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+#search-results li:hover {
+    transform: translateY(-5px);
+}
+
+#search-results img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#search-results div {
+    padding: 0px;
+}
+
+#search-results h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#search-results p {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+#search-results p strong {
+    color: #333;
+}
+
+#team footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* CSS Styles for Team Members */
+#team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.team-member {
+    width: 300px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.team-member p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+
+section#schedule {
+    padding: 50px 20px;
+}
+
+#calendar {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#schedule-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* CSS for League Table */
+#league-table {
+    margin-top: 50px;
+    text-align: center;
+margin-bottom: 50px;
+}
+
+#league-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#league-table th, #league-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#league-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+#league-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* CSS for League Table */
+#league-table {
+    flex: 1;
+    margin-right: 20px; /* Add some space between the table and quiz */
+}
+
+#league-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#league-table th, #league-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#league-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+#league-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* CSS for Soccer Quiz */
+#soccer-quiz {
+    flex: 1;
+margin-left:20px;
+}
+
+#soccer-quiz .question {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#soccer-quiz .options {
+    display: flex;
+    justify-content: center;
+margin: 30px;
+
+}
+
+#soccer-quiz .option {
+    margin: 0 10px;
+}
+
+#soccer-quiz button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.88s ease-out, transform 0.8s ease-in-out, background-color 0.8s ease-in-out;
+}
+
+#soccer-quiz button:hover {
+    color: white;
+    transform: scale(1.1);
+    background-color: blue;
+}
+
+
+.soccer {
+  background: url('../Test/Soccer_ball.svg');
+  background-size: 100px 100px;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  -webkit-animation:roll 4.5s infinite;
+  -moz-animation:roll 4.5s infinite;
+  animation:roll 4.5s infinite;
+margin-top: 50px;
+}
+
+
+@keyframes roll { 
+  0% {left:0px; -webkit-transform: rotate(-360deg);}
+  50% {left:1000px; -webkit-transform: rotate(360deg);}
+  100% {left:0px; -webkit-transform: rotate(-360deg);}
+}
+
+
+        /* CSS Styles for Gallery */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        #gallery .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        #gallery .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        #gallery .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        #gallery .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+   
+
+/* Contact Page Styles */
+#contact .container {
+    background-color: #fff;
+    border: 3px solid #333;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 60px;
+    text-align: center;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+#contact .container p {
+    color: rgb(136, 136, 136);
+    letter-spacing: 0.4px;
+}
+
+#contact .container form {
+    width: 100%;
+}
+
+#contact .container .input-area {
+    position: relative;
+    margin: 10px 0;
+    height: 44px;
+    width: 100%;
+}
+
+#contact .container .h-80 {
+    height: 80px;
+}
+
+#contact .container input,
+#contact .container textarea {
+    position: absolute;
+    display: block;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    padding: 12px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #999;
+    border-radius: 4px;
+    outline: none;
+    resize: none;
+}
+
+#contact .container .sendbtn {
+    display: block;
+    width: 104%;
+    background: #333;
+    color: #fff;
+    font-size: 18px;
+    padding: 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact .container .sendbtn:hover {
+    background-color: #993366;
+}
+
+@media screen and (max-width: 600px) {
+    #contact .container {
+        padding: 20px 30px;
+    }
+}
+
+#contact .social-container {
+    position: fixed;
+    right: 0;
+    bottom: 80px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 10;
+}
+
+#contact .social-container.visible {
+    transform: translateX(-10px);
+}
+
+#contact .custom-social-container {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 16px 31px -17px rgba(248, 4, 77, 0.6);
+    border: 5px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    height: 169px;
+    width: 370px;
+    max-width: calc(100% - 10px);
+}
+
+#contact .custom-social-container button.cross-btn {
+    border: 0;
+    color: #333;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+#contact .custom-social-container p {
+    background-color: #333;
+    border-radius: 0 0 10px 10px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 2px 17px 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 215px;
+}
+
+#contact .custom-social-container ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 58px;
+}
+
+#contact .custom-social-container ul li {
+    margin: 0 10px;
+}
+
+#contact .custom-social-container ul li a {
+    border: 1px solid #999;
+    border-radius: 50%;
+    color: #660033;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    text-decoration: none;
+}
+
+#contact .custom-social-container ul li a:hover {
+    border-color: #ffd791;
+    box-shadow: 0 9px 12px -9px #ffd791;
+}
+
+#contact .connect-btn {
+    border-radius: 26.5px;
+    background-color: #333;
+    border: 1px solid #fff;
+    box-shadow: 0 16px 22px -17px #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 12px 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+#contact .connect-btn:hover {
+    background-color: #993366;
+}
+
+@media screen and (max-width: 480px) {
+    #contact .social-container.visible {
+        transform: translateX(0px);
+    }
+
+@media screen and (max-width: 600px) {
+    #contact .container {
+        padding: 20px 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #about .container {
+        padding: 20px 30px;
+    }
+}
+
+
+
+
+    #contact .connect-btn {
+        right: 10px;
+    }
+}
+
+

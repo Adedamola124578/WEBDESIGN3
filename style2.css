@@ -1,0 +1,294 @@
+/* Global Styles */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    margin: auto;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+/* Mobile-first approach */
+/* Styles for small screens */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+
+}
+
+nav ul li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a::before,
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffd700;
+    transition: transform 0.3s, opacity 0.3s, width 0.3s;
+    transform: scaleX(0);
+    transform-origin: left;
+    opacity: 0;
+}
+
+nav ul li a::before {
+    top: 0;
+    bottom: auto;
+    transform-origin: right;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+nav ul li a:hover::before {
+    transform-origin: left;
+}
+
+nav ul li a:hover::after {
+    transform-origin: right;
+}
+
+nav ul li a:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for medium screens */
+@media screen and (min-width: 768px) {
+    nav ul {
+        text-align: left;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+   
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Contact Page Styles */
+#contact .container {
+    background-color: #fff;
+    border: 3px solid #333;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 60px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+#contact .container p {
+    color: rgb(136, 136, 136);
+    letter-spacing: 0.4px;
+}
+
+#contact .container form {
+    width: 100%;
+}
+
+#contact .container .input-area {
+    position: relative;
+    margin: 10px 0;
+    height: 44px;
+    width: 100%;
+}
+
+#contact .container .h-80 {
+    height: 80px;
+}
+
+#contact .container input,
+#contact .container textarea {
+    position: absolute;
+    display: block;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    padding: 12px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #999;
+    border-radius: 4px;
+    outline: none;
+    resize: none;
+}
+
+#contact .container .sendbtn {
+    display: block;
+    width: 104%;
+    background: #333;
+    color: #fff;
+    font-size: 18px;
+    padding: 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact .container .sendbtn:hover {
+    background-color: #993366;
+}
+
+@media screen and (max-width: 600px) {
+    #contact .container {
+        padding: 20px 30px;
+    }
+}
+
+#contact .social-container {
+    position: fixed;
+    right: 0;
+    bottom: 80px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 10;
+}
+
+#contact .social-container.visible {
+    transform: translateX(-10px);
+}
+
+#contact .custom-social-container {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 16px 31px -17px rgba(248, 4, 77, 0.6);
+    border: 5px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    height: 169px;
+    width: 370px;
+    max-width: calc(100% - 10px);
+}
+
+#contact .custom-social-container button.cross-btn {
+    border: 0;
+    color: #333;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+#contact .custom-social-container p {
+    background-color: #333;
+    border-radius: 0 0 10px 10px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 2px 17px 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 215px;
+}
+
+#contact .custom-social-container ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 58px;
+}
+
+#contact .custom-social-container ul li {
+    margin: 0 10px;
+}
+
+#contact .custom-social-container ul li a {
+    border: 1px solid #999;
+    border-radius: 50%;
+    color: #660033;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    text-decoration: none;
+}
+
+#contact .custom-social-container ul li a:hover {
+    border-color: #ffd791;
+    box-shadow: 0 9px 12px -9px #ffd791;
+}
+
+#contact .connect-btn {
+    border-radius: 26.5px;
+    background-color: #333;
+    border: 1px solid #fff;
+    box-shadow: 0 16px 22px -17px #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 12px 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+#contact .connect-btn:hover {
+    background-color: #993366;
+}
+
+@media screen and (max-width: 480px) {
+    #contact .social-container.visible {
+        transform: translateX(0px);
+    }
+
+    #contact .connect-btn {
+        right: 10px;
+    }
+}

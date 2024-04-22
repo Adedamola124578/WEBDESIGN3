@@ -1,0 +1,26 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Match 1",
+      "start": "2024-04-01",
+      "end": "2024-04-01",
+      "team": "Team A vs Team B"
+    },
+    {
+      "id": 2,
+      "title": "Match 2",
+      "start": "2024-04-05",
+      "end": "2024-04-05",
+      "team": "Team C vs Team D"
+    },
+    {
+      "id": 3,
+      "title": "Match 3",
+      "start": "2024-04-10",
+      "end": "2024-04-10",
+      "team": "Team E vs Team F"
+    }
+    // Add more events as needed
+  ]
+}

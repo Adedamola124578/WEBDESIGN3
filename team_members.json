@@ -1,0 +1,102 @@
+{
+  "teamMembers": [
+    {
+      "id": 1,
+      "name": "Ethan Young",
+      "position": "Forward",
+      "age": 24,
+      "country": "USA",
+      "image": "team/Ethan_Young.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Alice Smith",
+      "position": "Midfielder",
+      "age": 25,
+      "country": "England",
+      "image": "team/alice_smith.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Mohammed Ahmed",
+      "position": "Defender",
+      "age": 19,
+      "country": "Egypt",
+      "image": "team/mohammed_ahmed.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Jamis Fite",
+      "position": "Goalkeeper",
+      "age": 22,
+      "country": "Spain",
+      "image": "team/Jamis_Fite.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "Jadyn Harris",
+      "position": "Forward",
+      "age": 24,
+      "country": "Canada",
+      "image": "team/Jadyn_Harris.jpeg"
+    },
+    {
+      "id": 6,
+      "name": "Ben Bischof",
+      "position": "Midfielder",
+      "age": 18,
+      "country": "Germany",
+      "image": "team/Ben_Bischof.jpeg"
+    },
+    {
+      "id": 7,
+      "name": "Matthew Andrusko",
+      "position": "Midfielder",
+      "age": 20,
+      "country": "USA",
+      "image": "team/Matthew_Andrusko.jpeg"
+    },
+    {
+      "id": 8,
+      "name": "Winston Essibu",
+      "position": "Forward",
+      "age": 23,
+      "country": "Ghana",
+      "image": "luis_garcia.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Harry Kane",
+      "position": "Forward",
+      "age": 21,
+      "country": "England",
+      "image": "team/Chris_Quisenberry.jpeg"
+    },
+    {
+      "id": 10,
+      "name": "Olivia Knab",
+      "position": "Defender",
+      "age": 23,
+      "country": "Spain",
+      "image": "team/Olivia_Knab.jpeg"
+    },
+    {
+      "id": 11,
+      "name": "Michael Hong",
+      "position": "Defender",
+      "age": 23,
+      "country": "Spain",
+      "image": "team/Michael-Hong.jpeg"
+    },
+    {
+      "id": 12,
+      "name": "Naya Lipkens",
+      "position": "Goalkeeper",
+      "age": 23,
+      "country": "Spain",
+      "image": "team/Naya_Lipkens.jpeg"
+    }
+
+
+  ]
+}

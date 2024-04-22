@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - Elite sport Entertainment</title>
+<link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+ />
+
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar/main.min.css' rel='stylesheet' />
+<link rel="stylesheet" href="style1.css"> 
+
+<style>
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+        /* Close button styles */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<header>
+<img src="logo2.png" alt="University Soccer Logo" class="logo">
+    <h1>Elite Sport Entertainment</h1>
+    <nav>
+         <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="schedule">
+    <div id='calendar'></div>
+</section>
+
+<footer id="schedule-footer">
+    <p>&copy; 2024 Elite Sport Entertainment. All rights reserved.</p>
+</footer>
+
+<body>
+
+<div id='calendar'></div>
+
+<!-- Modal for displaying event details -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="eventTitle"></h2>
+    <p id="eventStart"></p>
+    <p id="eventEnd"></p>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="script2.js"></script>
+
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar/main.min.js'></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const calendarEl = document.getElementById('calendar');
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            events: 'events.json?v=' + new Date().getTime(), // Load events from JSON file with cache-busting query parameter
+            eventClick: function(info) { // Event click handler
+                const modal = document.getElementById("myModal");
+                const span = document.getElementsByClassName("close")[0];
+                const eventTitle = document.getElementById("eventTitle");
+                const eventStart = document.getElementById("eventStart");
+                const eventEnd = document.getElementById("eventEnd");
+
+                // Set event details in the modal
+                eventTitle.textContent = info.event.title;
+                eventStart.textContent = 'Start Date: ' + info.event.start.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+                eventEnd.textContent = 'Teams Playing: ' + info.event.extendedProps.team;
+
+                // Display the modal
+                modal.style.display = "block";
+
+                // Close the modal when the close button is clicked
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+
+                // Close the modal when the user clicks anywhere outside of the modal
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            }
+        });
+        calendar.render();
+    });
+</script>
+<style>
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+        /* Close button styles */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id='calendar'></div>
+
+<!-- Modal for displaying event details -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="eventTitle"></h2>
+    <p id="eventStart"></p>
+    <p id="eventEnd"></p>
+  </div>
+</div>
+
+
+</body>
+</html>
